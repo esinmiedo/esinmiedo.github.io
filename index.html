@@ -1,63 +1,31 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <title>esinmiedo</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background: #0b1d2a;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: sans-serif;
-      overflow: hidden;
-    }
-    h1 { z-index: 2; }
-    canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-    }
-  </style>
-</head>
 <body>
-<button id="sound-btn">Turn on sound</button>
 
-<iframe
-  id="yt-audio"
-  width="0"
-  height="0"
-  frameborder="0"
-  allow="autoplay; encrypted-media"
-></iframe>
+  <button id="sound-btn">Turn on sound</button>
 
-<script>
-  const btn = document.getElementById("sound-btn");
-  const iframe = document.getElementById("yt-audio");
-
-  btn.addEventListener("click", () => {
-    iframe.src =
-      "https://www.youtube.com/embed/kW5qjNphfMA?autoplay=1&playsinline=1";
-    btn.style.display = "none";
-  });
-</script>
-
-  const btn = document.getElementById("sound-btn");
-  const iframe = document.getElementById("yt-audio");
-
-  btn.addEventListener("click", () => {
-    iframe.src += "&autoplay=1";
-    btn.style.display = "none";
-  });
-</script>
+  <iframe
+    id="yt-audio"
+    width="0"
+    height="0"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+  ></iframe>
 
   <h1>❄️ Happy New Year Mucular! ❄️</h1>
   <canvas id="snow"></canvas>
 
+  <!-- YOUTUBE SOUND -->
+  <script>
+    const btn = document.getElementById("sound-btn");
+    const iframe = document.getElementById("yt-audio");
+
+    btn.addEventListener("click", () => {
+      iframe.src =
+        "https://www.youtube.com/embed/kW5qjNphfMA?autoplay=1&playsinline=1";
+      btn.style.display = "none";
+    });
+  </script>
+
+  <!-- SNOW -->
   <script>
     const canvas = document.getElementById('snow');
     const ctx = canvas.getContext('2d');
@@ -94,6 +62,6 @@
     }
 
     setInterval(draw, 33);
+  </script>
 
 </body>
-</html>
