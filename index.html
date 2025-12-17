@@ -2,8 +2,7 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>esinmiedo</title>
-
+  <title>Benim Şapşal Sitem</title>
   <style>
     body {
       margin: 0;
@@ -16,63 +15,22 @@
       font-family: sans-serif;
       overflow: hidden;
     }
-
-    h1 {
-      z-index: 2;
-    }
-
+    h1 { z-index: 2; }
     canvas {
       position: fixed;
       top: 0;
       left: 0;
       pointer-events: none;
     }
-
-    #sound-btn {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 3;
-      padding: 10px 14px;
-      border-radius: 20px;
-      border: none;
-      background: rgba(0,0,0,0.6);
-      color: white;
-      cursor: pointer;
-    }
   </style>
 </head>
-
 <body>
-
-  <button id="sound-btn">Turn on sound</button>
-
-  <iframe
-    id="yt-audio"
-    width="0"
-    height="0"
-    frameborder="0"
-    allow="autoplay; encrypted-media">
-  </iframe>
-
-  <h1>❄️ Happy New Year Mucular! ❄️</h1>
+  <h1>❄️ Şapşal ama mutlu bir site ❄️</h1>
   <canvas id="snow"></canvas>
-
-  <script>
-    const btn = document.getElementById("sound-btn");
-    const iframe = document.getElementById("yt-audio");
-
-    btn.addEventListener("click", () => {
-      iframe.src =
-        "https://www.youtube.com/embed/kW5qjNphfMA?autoplay=1&playsinline=1";
-      btn.style.display = "none";
-    });
-  </script>
 
   <script>
     const canvas = document.getElementById('snow');
     const ctx = canvas.getContext('2d');
-
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
@@ -107,6 +65,5 @@
 
     setInterval(draw, 33);
   </script>
-
 </body>
 </html>
