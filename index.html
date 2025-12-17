@@ -1,3 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>esinmiedo</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #0b1d2a;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+      overflow: hidden;
+    }
+
+    h1 {
+      z-index: 2;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    #sound-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 3;
+      padding: 10px 14px;
+      border-radius: 20px;
+      border: none;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
 <body>
 
   <button id="sound-btn">Turn on sound</button>
@@ -7,15 +52,14 @@
     width="0"
     height="0"
     frameborder="0"
-    allow="autoplay; encrypted-media"
-  ></iframe>
+    allow="autoplay; encrypted-media">
+  </iframe>
 
   <h1>❄️ Happy New Year Mucular! ❄️</h1>
   <canvas id="snow"></canvas>
 
-  <!-- YOUTUBE SOUND -->
   <script>
-    
+    const btn = document.getElementById("sound-btn");
     const iframe = document.getElementById("yt-audio");
 
     btn.addEventListener("click", () => {
@@ -25,10 +69,10 @@
     });
   </script>
 
-  <!-- SNOW -->
   <script>
     const canvas = document.getElementById('snow');
     const ctx = canvas.getContext('2d');
+
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
@@ -65,3 +109,4 @@
   </script>
 
 </body>
+</html>
